@@ -33,7 +33,7 @@ SET client_min_messages = warning;
 CREATE SCHEMA public;
 
 
-ALTER SCHEMA public OWNER TO postgres;
+ALTER SCHEMA public OWNER TO pplan;
 
 --
 -- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
@@ -73,7 +73,7 @@ CREATE TABLE program (
 );
 
 
-ALTER TABLE public.program OWNER TO postgres;
+ALTER TABLE public.program OWNER TO pplan;
 
 --
 -- Name: program_pid_seq; Type: SEQUENCE; Schema: public; Owner: postgres
@@ -87,7 +87,7 @@ CREATE SEQUENCE program_pid_seq
     CACHE 1;
 
 
-ALTER TABLE public.program_pid_seq OWNER TO postgres;
+ALTER TABLE public.program_pid_seq OWNER TO pplan;
 
 --
 -- Name: program_pid_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: postgres
@@ -107,7 +107,7 @@ ALTER TABLE ONLY program ALTER COLUMN pid SET DEFAULT nextval('program_pid_seq':
 -- Data for Name: program; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO program VALUES (1, 'Funky the Bear', 'Funky and his friends entertain all children.');
+INSERT INTO program VALUES (1, 'Funky the Bear', 'Funky and his friends entertains all children.');
 INSERT INTO program VALUES (2, 'Deep into the kitchen with Arny', 'Arny is a master chef who travels the seven seas to cook.');
 INSERT INTO program VALUES (3, 'Arguably Argued', 'A political talk-fest with satiric undertones.');
 INSERT INTO program VALUES (4, 'The almost new news', 'The best news show on this channel.');
@@ -126,16 +126,6 @@ SELECT pg_catalog.setval('program_pid_seq', 1, true);
 
 ALTER TABLE ONLY program
     ADD CONSTRAINT program_pkey PRIMARY KEY (pid);
-
-
---
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
