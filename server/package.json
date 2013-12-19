@@ -1,14 +1,21 @@
 {
-	"name": "application-name",
-		"version": "0.0.1",
-		"private": true,
-		"scripts": {
-			"start": "node app.js"
-		},
-		"dependencies": {
-			"express": "3.4.4",
-			"jade": "*",
-			"stylus": "*",
-			"pg": "*"
-		}
+	"name": "pplan",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "./node_modules/.bin/coffee app.coffee"
+	},
+	"dependencies": {
+		"express": "*",
+		"jade": "*",
+		"stylus": "*",
+		"pg": "*",
+		"supertest": "*",
+		"mocha": "*",
+		"methods": "*",
+		"coffee-script": "*"
+	},
+
+	"script": {
+		"test": "./node_modules/.bin/mocha test/test.coffee -r coffee-script"
+	}
 }

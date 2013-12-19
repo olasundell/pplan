@@ -24,6 +24,7 @@ namespace client {
 		}
 		// Shared initialization code
 		void Initialize () {
+			Table.Bind (... )
 		}
 
 		#endregion

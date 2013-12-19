@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="ProgrammeLister.cs" />
     <Compile Include="Tests\ProgrammeListerTest.cs" />
+    <Compile Include="TableSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainWindow.xib" />
