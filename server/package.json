@@ -5,14 +5,16 @@
 		"start": "./node_modules/.bin/coffee app.coffee"
 	},
 	"dependencies": {
-		"express": "*",
+		"express": "3.x",
 		"jade": "*",
 		"stylus": "*",
 		"pg": "*",
 		"supertest": "*",
 		"mocha": "*",
 		"methods": "*",
-		"coffee-script": "*"
+		"coffee-script": "*",
+		"sinon": "*",
+		"should": "*"
 	},
 
 	"script": {
