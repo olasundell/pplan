@@ -14,7 +14,8 @@
 		"methods": "*",
 		"coffee-script": "*",
 		"sinon": "*",
-		"should": "*"
+		"should": "*",
+		"winston": "*"
 	},
 
 	"script": {

@@ -6,6 +6,8 @@ express = require("express")
 routes = require("./routes")
 user = require("./routes/user")
 programme = require("./routes/programme")
+event = require("./routes/event")
+episode = require("./routes/episode")
 http = require("http")
 path = require("path")
 app = module.exports = express()
@@ -29,6 +31,10 @@ app.get "/", routes.index
 app.get "/users", user.list
 app.get "/programmes", programme.list
 app.get "/programme/:id", programme.view
+app.get "/events", event.list
+app.get "/event/:id", event.view
+app.get "/episodes", episode.list
+app.get "/episode/:id", episode.view
 http.createServer(app).listen app.get("port"), ->
 	console.log "Express server listening on port " + app.get("port")
 
